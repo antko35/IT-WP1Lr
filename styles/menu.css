@@ -1,0 +1,43 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 22vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding-inline: 3vw;
+  padding-block: 3vh;
+
+  background-color: black;
+  color: white;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar a {
+margin-block: .7vh;
+
+  text-decoration: none;
+  color: white;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  margin-block: .7vh;
+}
+
+.copyright {
+  font-size: .8rem;
+}
