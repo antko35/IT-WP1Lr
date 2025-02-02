@@ -3,7 +3,7 @@
   src: url("/assets/fonts/menu.woff2") format("woff2");
 }
 
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -11,6 +11,6 @@ body {
   font-family: "main";
 }
 
-
-
-
+main{
+  margin-left: 20vw;
+}

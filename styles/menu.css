@@ -1,8 +1,10 @@
 .menu {
+  position: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 22vw;
+  width: 20vw;
   height: 100vh;
   box-sizing: border-box;
   padding-inline: 3vw;
@@ -23,7 +25,7 @@
 }
 
 .navbar a {
-margin-block: .7vh;
+  margin-block: 0.7vh;
 
   text-decoration: none;
   color: white;
@@ -35,9 +37,9 @@ margin-block: .7vh;
 }
 
 .links a {
-  margin-block: .7vh;
+  margin-block: 0.7vh;
 }
 
 .copyright {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
