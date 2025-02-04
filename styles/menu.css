@@ -1,4 +1,4 @@
-.menu {
+.menu-landscape {
   position: fixed;
 
   display: flex;
@@ -14,17 +14,17 @@
   color: white;
 }
 
-.logo {
+.menu-landscape > .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
 
-.navbar {
+.menu-landscape > .navbar {
   display: flex;
   flex-direction: column;
 }
 
-.navbar a {
+.menu-landscape > .navbar a {
   margin-block: .7vh;
 
   font-size: .7em;
@@ -32,19 +32,19 @@
   color: white;
 }
 
-.links {
+.menu-landscape > .links {
   display: flex;
   flex-direction: column;
 }
 
-.links a {
+.menu-landscape > .links a {
   margin-block: .7vh;
 }
 
-.links a img{
+.menu-landscape > .links a img{
   height: calc(2vh + 4vw);
 }
 
-.copyright {
+.menu-landscape > .copyright {
   font-size: 0.5em;
 }
