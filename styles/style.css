@@ -12,5 +12,23 @@
 }
 
 main{
-  margin-left: 20vw;
+  margin-left: calc(14vw + 3vh);
+}
+
+@media (max-width: 535px){
+  body{
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 390px){
+  body{
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 260px){
+  body{
+    font-size: 6px;
+  }
 }
