@@ -1,50 +1,50 @@
-.menu-landscape {
-  position: fixed;
-
+.menu-landscape{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: calc(14vw + 3vh);
-  height: 100vh;
-  box-sizing: border-box;
-  padding-inline: 3vw;
-  padding-block: 3vh;
+  padding-inline: 2vw;
 
   background-color: black;
   color: white;
 }
 
-.menu-landscape > .logo {
-  font-size: 1.5em;
+.menu-landscape > .navbar,
+.menu-landscape > .links{
+  display: flex;
+  flex-direction: column;
+  margin-top: 3vh;
+}
+
+.menu-landscape > .logo{
+  margin-top: 3vh;
+
+  font-size: 2rem;
   font-weight: bold;
 }
 
-.menu-landscape > .navbar {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-landscape > .navbar a {
-  margin-block: .7vh;
-
-  font-size: .7em;
+.menu-landscape a{
+  margin-block: 1vh;
   text-decoration: none;
   color: white;
 }
 
-.menu-landscape > .links {
-  display: flex;
-  flex-direction: column;
+.menu-landscape > .links img{
+  height: calc(3.5vh + 1.5vw);
 }
 
-.menu-landscape > .links a {
-  margin-block: .7vh;
+.menu-landscape > .copyright{
+  position: absolute;
+  bottom: 3vh;
+  right: 1vw;
+  left: 1vw;
+  font-size: 0.6rem;
 }
 
-.menu-landscape > .links a img{
-  height: calc(2vh + 4vw);
-}
-
-.menu-landscape > .copyright {
-  font-size: 0.5em;
+@media screen and (orientation: landscape) and (max-height: 360px) {
+  .menu-landscape > .copyright{
+    position: relative;
+    margin-top: 3vh;
+    bottom: 0vh;
+    right: 0vw;
+    left: 0vw;
+  }
 }

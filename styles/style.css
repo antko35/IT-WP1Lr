@@ -11,24 +11,13 @@
   font-family: "main";
 }
 
-main{
-  margin-left: calc(14vw + 3vh);
+header{
+  position: relative;
+
+  background-color: black;
+  height: 100vh;
 }
 
-@media (max-width: 535px){
-  body{
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 390px){
-  body{
-    font-size: 8px;
-  }
-}
-
-@media (max-width: 260px){
-  body{
-    font-size: 6px;
-  }
+body{
+  display: flex;
 }
