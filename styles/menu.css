@@ -39,6 +39,7 @@
   font-size: 0.6rem;
 }
 
+/*Пока адаптивка для горизонтальной ориентации, для телефонов наверное лучше меню сверху*/
 @media screen and (orientation: landscape) and (max-height: 360px) {
   .menu-landscape > .copyright{
     position: relative;
