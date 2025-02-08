@@ -19,8 +19,8 @@ body {
   display: flex;
 }
 
-/* ==== Десктопное меню (menu-landscape) ==== */
-.menu-landscape {
+/* ==== Меню ==== */
+.menu {
   width: 20vw;
   height: 100vh;
   position: fixed;
@@ -31,6 +31,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  transition: top 0.7s ease-in-out;
 }
 
 .logo {
@@ -65,11 +66,9 @@ body {
   margin-top: auto;
   display: flex;
   gap: 15px;
-  padding-left: 3vw;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 
 .links a img {
   width: 24px;
@@ -77,51 +76,35 @@ body {
   transition: transform .2s ease-in-out;
 }
 
-.links a:hover img{
+.links a:hover img {
   transform: scale(1.2);
 }
 
-.copyright{
+.copyright {
   color: white;
   text-align: center;
+  padding-bottom: 5px;
 }
+
 /* Основной контент */
 main {
-  margin-left: 20vw; /* Чтобы контент не залезал под меню */
+  margin-left: 20vw;
   padding: 20px;
 }
 
-/* ==== Мобильное меню (menu-portrait) ==== */
-.menu-portrait {
+/* ==== Мобильное меню ==== */
+.mobile-header {
   display: none;
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: auto;
-  background: black;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 75px;
-  transition: top 0.7s ease-in-out;
-  z-index: 999;
-}
-
-.menu-portrait.active {
-  top: 0; 
-}
-
-/* .menu-portrait .navbar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-
-.menu-portrait .navbar a {
+  background: #222;
   color: white;
-  font-size: 18px;
-} */
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
 
 .menu-toggle {
   display: none;
@@ -136,49 +119,42 @@ main {
 
 /* ==== Адаптация под мобильные устройства ==== */
 @media (max-width: 768px) {
-  .menu-landscape {
-    display: none; /* Скрываем десктопное меню */
+  .menu {
+    width: 100%;
+    height: auto;
+    top: -100%;
+    align-items: start;
+    padding-top: 75px;
   }
 
+  .menu.active {
+    top: 0;
+  }
+
+  .menu .logo{
+    display: none;
+  }
+  
   .mobile-header {
     display: flex;
-    /* justify-content: space-between; 
-    align-items: flex-start; */
-    background: #222; /* Цвет фона */
-    color: white;
-    padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    height: 75px;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .menu-toggle {
-    display: block; 
-    align-self: center;
-    transition: transform 0.7s ease-in-out;
-  }
-
-  .menu-toggle.active {
-    transform: rotate(90deg);
-}
-
-  .menu-portrait {
-    display: flex;
-  } 
-
-  .menu-portrait.active {
     display: block;
-  } 
-
-  .logo{
-    margin-bottom: 0%;
-    align-self: center;
-    width: 50%;
   }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .links{
+    padding-left: 15px;
+  }
+
   main {
-    margin-left: 0; /* На мобильных убираем отступ */
+    margin-top: 75px;
+    margin-left: 0;
   }
 }

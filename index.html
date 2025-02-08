@@ -1,64 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
     <title>Главная страница</title>
-
     <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/icon/favicon.ico" />
     <link rel="shortcut icon" href="/icon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 </head>
-
 <body>
 <header>
-    <div class="menu-landscape">
-        <section class="logo">.KoSo</section>
-
-        <nav class="navbar">
-<!---на каждой странице перемещать class active, этот класс делает выбранный пункт жирнее
--->
-            <a href="index.html" class="active">Главная</a>
-            <a href="pages/about.html">О нас</a>
-            <a href="pages/services.html">Услуги</a>
-            <a href="pages/blog.html">Блог</a>
-            <a href="pages/projects.html">Проекты</a>
-            <a href="pages/contact.html">Контакты</a>
-        </nav>
-
-        <section class="links">
-            <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
-            <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
-            <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
-        </section>
-
-        <section class="copyright">
-            Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
-        </section>
-    </div>
-
     <div class="mobile-header">
         <div class="menu-toggle">&#9776;</div>
         <section class="logo">.KoSo</section>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const menuPortrait = document.querySelector(".menu-portrait");
 
-        menuToggle.addEventListener("click", function () {
-        menuPortrait.classList.toggle("active"); 
-        menuToggle.classList.toggle("active");
-        });
-        });
-    </script>
-<!--и в этом меню тоже-->
-    <div class="menu-portrait">
-
+    <div class="menu">
+        <section class="logo">.KoSo</section>
         <nav class="navbar">
             <a href="index.html" class="active">Главная</a>
             <a href="pages/about.html">О нас</a>
@@ -67,28 +28,37 @@
             <a href="pages/projects.html">Проекты</a>
             <a href="pages/contact.html">Контакты</a>
         </nav>
-
         <section class="links">
             <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
             <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
             <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
         </section>
-
         <section class="copyright">
             Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
         </section>
     </div>
 </header>
 
-    <main>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti tempore ipsa quibusdam odio distinctio
-            temporibus tenetur dolor ratione, eum, saepe eligendi ut suscipit dolore nulla sapiente qui adipisci
-            mollitia.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti tempore ipsa quibusdam odio
-            distinctio
-            temporibus tenetur dolor ratione, eum, saepe eligendi ut suscipit dolore nulla sapiente qui adipisci
-            mollitia.
-        </p>
-    </main>
-</body>
+<main>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti tempore ipsa quibusdam odio distinctio
+        temporibus tenetur dolor ratione, eum, saepe eligendi ut suscipit dolore nulla sapiente qui adipisci
+        mollitia.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti tempore ipsa quibusdam odio
+        distinctio
+        temporibus tenetur dolor ratione, eum, saepe eligendi ut suscipit dolore nulla sapiente qui adipisci
+        mollitia.
+    </p>
+</main>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+
+        menuToggle.addEventListener("click", function () {
+            menu.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+        });
+    });
+</script>
+</body>
 </html>
