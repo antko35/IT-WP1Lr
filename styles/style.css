@@ -1,7 +1,12 @@
-@font-face {
+ @font-face {
   font-family: "main";
-  src: url("/assets/fonts/menu.woff2") format("woff2");
-}
+  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf");
+ }
+
+ @font-face {
+  font-family: "logo";
+  src: url("/assets//fonts/IBM_Plex_Serif/IBMPlexSerif-Bold.ttf");
+ }
 
 * {
   box-sizing: border-box;
@@ -20,4 +25,13 @@ header{
 
 body{
   display: flex;
+}
+
+.logo{
+  font-family: "logo";
+}
+
+.navbar a.active {
+  font-weight:bold;
+  font-size: larger;
 }

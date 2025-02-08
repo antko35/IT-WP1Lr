@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/menu.css">
     <title>Главная страница</title>
+
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icon/favicon.ico" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 
 <body>
 <header>
+    на каждой странице перемещать class active, этот класс делает выбранный пункт жирнее
     <div class="menu-landscape">
         <section class="logo">.KoSo</section>
 
         <nav class="navbar">
-            <a href="index.html">Главная</a>
+            <a href="index.html" class="active">Главная</a>
             <a href="pages/about.html">О нас</a>
             <a href="pages/services.html">Услуги</a>
             <a href="pages/blog.html">Блог</a>
@@ -33,12 +40,12 @@
             Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
         </section>
     </div>
-
+    и в этом меню тоже
     <div class="menu-portrait" style="display: none;">
         <section class="logo">.KoSo</section>
 
         <nav class="navbar">
-            <a href="index.html">Главная</a>
+            <a href="index.html" class="active">Главная</a>
             <a href="pages/about.html">О нас</a>
             <a href="pages/services.html">Услуги</a>
             <a href="pages/blog.html">Блог</a>
