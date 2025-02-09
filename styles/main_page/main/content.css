@@ -50,9 +50,13 @@ main{
 
 .button{
     margin-top: 10px;
-    padding: 10px 20px;
+    width: 259px;
+    height: 56px;
     max-width: 230px;
     background-color: black;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
@@ -114,11 +118,3 @@ main{
     width: 1px;
 }
 
-.socials .links{
-    flex-direction: column;
-    margin-top: 0;
-    display: flex;
-    gap: 10px; 
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
