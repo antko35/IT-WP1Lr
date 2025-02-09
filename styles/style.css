@@ -17,11 +17,13 @@
 
 body {
   display: flex;
+  height: 100vh;
 }
 
 /* ==== Меню ==== */
 .menu {
   width: 20vw;
+  max-width: 250px;
   height: 100vh;
   position: fixed;
   left: 0;
@@ -83,7 +85,7 @@ body {
 .copyright {
   color: white;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
 }
 
 /* Основной контент */
