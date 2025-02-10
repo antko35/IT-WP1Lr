@@ -21,36 +21,49 @@ main {
   width: 100vw;
 }
 
-.content{
+/* ==== Информация сайта ==== */
+
+.content {
   flex-basis: 40%; /* Задайте одинаковую ширину */
   max-width: 40%; /* Ограничите максимальную ширину */
   height: auto;
   flex-direction: column;
 }
 
-.upper-content{
-    display: flex;
-    flex-direction: row;
+/* ==== Верхняя половина ==== */
+
+.upper-content {
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
 }
 
-.photo{
-    font-size: 1em;
-    text-align: center;
-    font-weight: bold;
+.upper-content .right-side {
+  margin-top: 15vh;
+  padding-left: 2vw;
 }
 
-.photo p::first-line{
-    font-size: 2.4em;
-    text-transform: uppercase;
-    color: #e36c11;
+.horizontal_line {
+  max-width: 100%;
+  width: 60vw;
 }
 
+.photo {
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  width: 25vw;
+}
+
+.photo p span {
+  font-size: 2.4em;
+  text-transform: uppercase;
+  color: #e36c11;
+}
 
 .text p:first-child {
-  max-width: 100%;
   font-family: "main";
-  font-size: 2em;
-
+  font-size: 1.3em;
   /* word-wrap: break-word; */
 }
 
@@ -59,46 +72,36 @@ main {
   font-size: calc(20px + 30 * (100vw - 320px) / 960);
 }
 
-
 .contact_info {
-  margin-top: 20vh;
   display: flex;
   /* justify-content: space-between; */
-  gap: 3vw;
+  gap: 1vw;
 }
 
 .phone,
-.mail {
+.mail,
+.experience,
+.location {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 2vw;
 }
 
 .contact_info p {
   font-family: "sans_bold_italic";
   font-size: 18px;
+  width: 15vw;
+}
+
+.contact_info img {
+  width: 3vw;
+  min-width: 20px;
 }
 
 .photo {
-  margin: 5vw;
+  margin: calc(2vw + 2vh);
 }
 .photo img {
   max-width: 100%;
   height: auto;
-}
-
-
-
-
-.socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
-.socials img {
-  height: 131px;
-  width: 1px;
 }
