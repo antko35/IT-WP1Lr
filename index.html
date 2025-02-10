@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,96 +15,98 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 </head>
+
 <body>
-<header>
-    <div class="mobile-header">
-        <div class="menu-toggle">&#9776;</div>
-        <section class="logo">.KoSo</section>
-    </div>
-
-    <div class="menu">
-        <section class="logo">.KoSo</section>
-        <nav class="navbar">
-            <a href="index.html" class="active">Главная</a>
-            <a href="pages/about.html">О нас</a>
-            <a href="pages/services.html">Услуги</a>
-            <a href="pages/blog.html">Блог</a>
-            <a href="pages/projects.html">Проекты</a>
-            <a href="pages/contact.html">Контакты</a>
-        </nav>
-        <section class="links">
-            <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
-            <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
-            <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
-        </section>
-        <section class="copyright">
-            Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
-        </section>
-    </div>
-</header>
-
-<main>
-    <div class="content">
-        <div class="inside_content">
-            <div class="text">
-                <p>
-                    Студия дизайна <b>.KoSo</b>
-                </p>
-                <p>
-                    <i><b>Студия</b></i> находится в <i><b>Минске</b></i>
-                </p>
-            </div>
-            <div class="button">
-                <div class="button_container">
-                    <p>Связаться с нами</p>
-                <img src="/icon/web-app-manifest-192x192.png">
-                </div>
-            </div>
-            <div class="contact_info">
-                <div class="phone">
-                    <img src="/assets/svg/phone.svg">
-                    <p class="phone_num">
-                    +375-12-345-67-89
-                    </p>
-                </div>
-                
-                <div class="mail" >
-                    <img src="/assets/svg/mail.svg">
-                    <p class="email">
-                        koso@gmail.com
-                    </p>
-                </div>
-                
-            </div>
-            
+    <header>
+        <div class="mobile-header">
+            <div class="menu-toggle">&#9776;</div>
+            <section class="logo">.KoSo</section>
         </div>
-    </div>
-    
-    <div class="photo">  
-        <img src="/assets/photos/main_photo.png" alt="photo">
-    </div>
 
-    <div class="socials">
-        <section class="links">
-            <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
-            <a href="#"><img src="/assets/svg/facebook.svg" alt="tg"></a>
-            <a href="#"><img src="/assets/svg/icon.svg" alt="linkedin"></a>
-        </section>
-        <img src="/assets/photos/vertical_line.png">
-    </div>
+        <div class="menu">
+            <section class="logo">.KoSo</section>
+            <nav class="navbar">
+                <a href="index.html" class="active">Главная</a>
+                <a href="pages/about.html">О нас</a>
+                <a href="pages/services.html">Услуги</a>
+                <a href="pages/blog.html">Блог</a>
+                <a href="pages/projects.html">Проекты</a>
+                <a href="pages/contact.html">Контакты</a>
+            </nav>
+            <section class="links">
+                <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
+                <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
+                <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
+            </section>
+            <section class="copyright">
+                Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
+            </section>
+        </div>
+    </header>
 
-</main>
+    <main>
+        <div class="content">
+            <div class="inside_content">
+                <div class="text">
+                    <p>
+                        Студия дизайна <b>.KoSo</b>
+                    </p>
+                    <p>
+                        <i><b>Студия</b></i> находится в <i><b>Минске</b></i>
+                    </p>
+                </div>
+                <div class="button">
+                    <div class="button_container">
+                        <a href="#">Связаться с нами</a>
+                        <img src="/icon/web-app-manifest-192x192.png">
+                    </div>
+                </div>
+                <div class="contact_info">
+                    <div class="phone">
+                        <img src="/assets/svg/phone.svg">
+                        <p class="phone_num">
+                            +375-12-345-67-89
+                        </p>
+                    </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const menu = document.querySelector(".menu");
+                    <div class="mail">
+                        <img src="/assets/svg/mail.svg">
+                        <p class="email">
+                            koso@gmail.com
+                        </p>
+                    </div>
 
-        menuToggle.addEventListener("click", function () {
-            menu.classList.toggle("active");
-            menuToggle.classList.toggle("active");
+                </div>
+
+            </div>
+        </div>
+
+        <div class="photo">
+            <img src="/assets/photos/main_photo.png" alt="photo">
+        </div>
+
+        <div class="socials">
+            <section class="links">
+                <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
+                <a href="#"><img src="/assets/svg/facebook.svg" alt="tg"></a>
+                <a href="#"><img src="/assets/svg/icon.svg" alt="linkedin"></a>
+            </section>
+            <img src="/assets/photos/vertical_line.png">
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+            });
         });
-    });
-</script>
+    </script>
 </body>
+
 </html>

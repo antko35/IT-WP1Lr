@@ -24,9 +24,9 @@ main {
 /* ==== Информация сайта ==== */
 
 .content {
+  display: flex;
   flex-basis: 45%; /* Задайте одинаковую ширину */
   max-width: 70%; /* Ограничите максимальную ширину */
-  height: auto;
   flex-direction: column;
 }
 
@@ -35,8 +35,61 @@ main {
 .upper-content {
   display: flex;
   flex-direction: row;
-  max-height: 100vh;
+  max-height: 90vh;
 }
+
+/* Левая часть */
+
+.upper-content .text p:first-child {
+  font-family: "main";
+  font-size: 1.3em;
+  /* word-wrap: break-word; */
+}
+
+.upper-content .text p:nth-child(2) {
+  font-family: "main";
+  font-size: calc(20px + 30 * (100vw - 320px) / 960);
+}
+
+.photo {
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  width: 25vw;
+  margin: calc(2vw + 2vh);
+}
+
+.photo img {
+  max-width: 100%;
+}
+
+.photo figcaption span {
+  font-size: 2.2em;
+  text-transform: uppercase;
+  color: #e36c11;
+}
+
+.CV{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  padding: 4%;
+  cursor: pointer;
+}
+
+.CV a{
+  color: black;
+}
+
+.CV img{
+  background-color: black;
+  max-height: 3vh;
+  margin-left: 10%;
+}
+
+/* Правая часть */
 
 .upper-content .right-side {
   margin-top: 15vh;
@@ -48,43 +101,10 @@ main {
   width: 60vw;
 }
 
-.photo {
-  font-size: 1em;
-  text-align: center;
-  font-weight: bold;
-  width: 25vw;
-}
-
-.photo p span {
-  font-size: 2.4em;
-  text-transform: uppercase;
-  color: #e36c11;
-}
-
-.text p:first-child {
-  font-family: "main";
-  font-size: 1.3em;
-  /* word-wrap: break-word; */
-}
-
-.text p:nth-child(2) {
-  font-family: "main";
-  font-size: calc(20px + 30 * (100vw - 320px) / 960);
-}
-
 .contact_info {
   display: flex;
   /* justify-content: space-between; */
   gap: 1vw;
-}
-
-.phone,
-.mail,
-.experience,
-.location {
-  display: flex;
-  align-items: center;
-  gap: 2vw;
 }
 
 .contact_info p {
@@ -98,10 +118,57 @@ main {
   min-width: 20px;
 }
 
-.photo {
-  margin: calc(2vw + 2vh);
+.phone,
+.mail,
+.experience,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
 }
-.photo img {
-  max-width: 100%;
-  height: auto;
+
+.experience_inf{
+  margin-top: 4vh;
+  display: flex;
+  justify-content: space-between;
 }
+
+.experience_inf .experience_inf_block:first-child{
+  margin-right: 7%;
+}
+
+.experience_inf_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience_inf_block p:first-child span{
+  font-size: 2em;
+  color: #b300ff;
+}
+
+.lorem_ipsum{
+  display: flex;
+  align-items: center;
+  margin-top: 4vh;
+  padding: 5%;
+  background-color: black;
+  color: white;
+}
+
+.lorem_ipsum img{
+  margin-right: 5%;
+}
+
+
+/*Нижняя часть*/
+
+.lower_content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+  background-image: linear-gradient(to right, #be69eb 0%, #e04f4f 50%, #f0a21a 100%);
+}
+
+
+

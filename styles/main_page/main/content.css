@@ -66,9 +66,10 @@ main{
     display: flex;
     justify-content: space-between;
 }
-.button_container p{
+.button_container a{
     font-family: "sans_medium";
     font-size: 18px;
+    text-decoration: none;
     color: white;
     align-self: center;
 }
