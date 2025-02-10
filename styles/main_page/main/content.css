@@ -37,7 +37,7 @@ main{
 .text p:first-child{
     max-width: 70%;
     font-family: "main";
-    font-size: 102px;
+    /*font-size: 102px;*/
     font-size: calc(24px + 78 * (100vw - 320px) / 960);
 
     /* word-wrap: break-word; */

@@ -40,7 +40,7 @@ body {
 .logo {
   margin-top: 2vh;
   font-family: "logo";
-  font-size: 24px;
+  font-size: 1.5em;
   color: white;
   margin-bottom: 30px;
 }
@@ -58,13 +58,13 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .navbar a:hover,
 .navbar a.active {
   font-weight: bold;
-  font-size: larger;
+  font-size: 1.3em;
   border-left: 4px solid white;
   padding-left: 10px;
 }
@@ -116,7 +116,7 @@ main {
 
 .menu-toggle {
   display: none;
-  font-size: 30px;
+  font-size: 2em;
   color: white;
   cursor: pointer;
   position: fixed;
@@ -126,13 +126,14 @@ main {
 }
 
 /* ==== Адаптация под мобильные устройства ==== */
-@media (max-width: 768px) {
+@media (max-width: 768px) or (max-height: 760px) {
   .menu {
     width: 100%;
     height: auto;
     top: -100%;
     align-items: start;
     padding-top: 75px;
+    font-size: 12px;
   }
 
   .menu.active {
@@ -159,6 +160,12 @@ main {
 
   .links{
     padding-left: 15px;
+  }
+
+  .links a img {
+    width: 25px;
+    height: 25px;
+    transition: transform .2s ease-in-out;
   }
 
   main {
