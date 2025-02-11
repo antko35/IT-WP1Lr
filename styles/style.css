@@ -17,13 +17,13 @@
 
 body {
   display: flex;
-  height: 100vh;
+  height: auto;
 }
 
 /* ==== Меню ==== */
 .menu {
-  width: 20vw;
-  max-width: 250px;
+  width: 15vw;
+  /*max-width: 250px;*/
   height: 100vh;
   padding-left: 3%;
   position: fixed;
@@ -33,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  padding-top: 20px;
+  padding-block: 3vh;
   transition: top 0.7s ease-in-out;
 }
 
@@ -169,8 +169,11 @@ main {
     transition: transform .2s ease-in-out;
   }
 
+  body{
+    margin-top: 10vh;
+  }
+
   main {
-    margin-top: 30vh;
     margin-left: 0;
     font-size: 14px;
   }
