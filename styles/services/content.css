@@ -1,0 +1,117 @@
+@font-face {
+    font-family: "sans_SemiBoldItalic";
+    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "sans_Bold";
+    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
+}
+
+/* Основные стили для заголовков */
+.content {
+    margin-top: 8.3vh;
+    margin-left: 7vw;
+}
+
+.title .services-title {
+    font-size: 32px;
+    font-family: "sans_Bold";
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.title .profile-title {
+    font-size: 48px;
+    font-family: "sans_Bold";
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Стили для контейнера услуг */
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Отступ между блоками */
+}
+
+/* Стили для каждого блока услуги */
+.block {
+    width: 64.3vw;
+    border-bottom: 1px solid grey;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 8px; */
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    position: relative; /* Для псевдоэлемента */
+}
+
+.block:hover {
+    background-color: #f9f9f9;
+}
+
+/* Стили для заголовка блока */
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.service-header p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    position: relative; 
+}
+
+.service-header p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); 
+    transition: width 0.3s ease; 
+}
+
+/* Подчеркивание для активного блока */
+.block.active .service-header p::after {
+    width: 100%; /* Полное подчеркивание */
+}
+
+.block.active .service-header p {
+    -webkit-background-clip: text;
+    background-clip: text;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b); 
+}
+
+.toggle-icon {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* Анимация для плюсика */
+}
+
+/* Стили для скрытого контента */
+.service-content {
+    display: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px);
+}
+
+/* Класс для развернутого блока */
+.block.active .service-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.block.active .toggle-icon {
+    transform: rotate(45deg); /* Поворот "+" на "×" */
+}

@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/services/content.css">
+
     <title>Услуги</title>
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icon/favicon.ico" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-    
+<header>
+    <div class="mobile-header">
+        <div class="menu-toggle">&#9776;</div>
+        <section class="logo">.KoSo</section>
+    </div>
+
+    <div class="menu">
+        <section class="logo">.KoSo</section>
+        <nav class="navbar">
+            <a href="/index.html" >Главная</a>
+            <a href="/pages/about.html">О нас</a>
+            <a href="/pages/services.html" class="active">Услуги</a>
+            <a href="/pages/blog.html">Блог</a>
+            <a href="/pages/projects.html">Проекты</a>
+            <a href="/pages/contact.html">Контакты</a>
+        </nav>
+        <section class="links">
+            <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
+            <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
+            <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
+        </section>
+        <section class="copyright">
+            Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
+        </section>
+    </div>
+</header>
+
+<main>
+    <div class="content">
+        <div class="title">
+            <p class="services-title">Услуги</p>
+            <p class="profile-title">Наш профиль</p>
+        </div>
+
+        <div class="services">
+            <div class="block">
+                <div class="service-header">
+                    <p>Веб-дизайн</p>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="service-content">
+                    <p>Мы создаем современные и удобные веб-сайты.</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="service-header">
+                    <p>UX/UI Дизайн</p>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="service-content">
+                    <p>Мы проектируем интерфейсы, которые нравятся пользователям.</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="service-header">
+                    <p>Мобильные приложения</p>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="service-content">
+                    <p>Разработка мобильных приложений для iOS и Android.</p>
+                </div>
+            </div>
+            <div class="block">
+                <div class="service-header">
+                    <p>Исследование пользователей</p>
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="service-content">
+                    <p>Помогаем понять вашу аудиторию.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+    });
+
+    // Раскрытие блоков
+    document.querySelectorAll('.block').forEach(block => {
+        block.addEventListener('click', () => {
+            // Закрываем все блоки, кроме текущего
+            document.querySelectorAll('.block').forEach(otherBlock => {
+                if (otherBlock !== block) {
+                    otherBlock.classList.remove('active');
+                }
+            });
+            // Открываем/закрываем текущий блок
+            block.classList.toggle('active');
+        });
+    });
+});
+</script>
 </body>
 </html>
