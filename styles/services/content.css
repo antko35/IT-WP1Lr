@@ -8,16 +8,20 @@
     src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
 }
 
+@font-face {
+    font-family: "sans_regular";
+    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf);
+}
 /* Основные стили для заголовков */
 .content {
     margin-top: 8.3vh;
-    margin-left: 7vw;
+    margin-left: 5.9vw;
 }
 
 .title .services-title {
-    font-size: 32px;
-    font-family: "sans_Bold";
-    font-weight: bold;
+    font-size: 18px;
+    font-family: "sans_SemiBoldItalic";
+    font-weight: italic;
     margin-bottom: 10px;
 }
 
@@ -60,7 +64,8 @@
 
 .service-header p {
     margin: 0;
-    font-size: 20px;
+    font-size: 32px;
+    font-family: "sans_Bold";
     font-weight: bold;
     color: black;
     position: relative; 
@@ -79,13 +84,16 @@
 
 /* Подчеркивание для активного блока */
 .block.active .service-header p::after {
-    width: 100%; /* Полное подчеркивание */
+    width: 100%;
 }
 
 .block.active .service-header p {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
     background-clip: text;
-    background: linear-gradient(90deg, #ff7e5f, #feb47b); 
+    color: transparent;
+    display: inline-block;
+    font-weight: bold;
 }
 
 .toggle-icon {
@@ -97,21 +105,35 @@
 /* Стили для скрытого контента */
 .service-content {
     display: none;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(-10px);
+}
+
+.service-content p{
+    font-size: 16px;
+    font-family: "sans_regular";
 }
 
 /* Класс для развернутого блока */
 .block.active .service-content {
-    display: block;
+    align-self: center;
+    width: 28.3vw;
     opacity: 1;
     transform: translateY(0);
+    display: flex;
+    align-items: start;
+    margin-left: 36vw;
+    flex-direction: column;
+    gap: 3vh;
+    transition: opacity 10s ease, transform 10s ease;
+}
+
+.service-content img{
+    width: 22.3vw;
+    height: auto;
 }
 
 .block.active .toggle-icon {
     transform: rotate(45deg); /* Поворот "+" на "×" */
 }
+
