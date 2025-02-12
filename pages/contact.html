@@ -1,11 +1,99 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Связь со мной</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/contacts_page/content.css">
+
+    <title>О нас</title>
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/icon/favicon.ico" />
+    <link rel="shortcut icon" href="/icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 </head>
+
 <body>
-    
+    <header>
+        <div class="mobile-header">
+            <div class="menu-toggle">&#9776;</div>
+            <section class="logo">.KoSo</section>
+        </div>
+
+        <div class="menu">
+            <section class="logo">.KoSo</section>
+            <nav class="navbar">
+                <a href="../index.html">Главная</a>
+                <a href="about.html">О нас</a>
+                <a href="services.html">Услуги</a>
+                <a href="blog.html">Блог</a>
+                <a href="projects.html">Проекты</a>
+                <a href="contact.html" class="active">Контакты</a>
+            </nav>
+            <section class="links">
+                <a href="#"><img src="/assets/svg/inst.svg" alt="inst"></a>
+                <a href="#"><img src="/assets/svg/tg.svg" alt="tg"></a>
+                <a href="#"><img src="/assets/svg/linkedin.svg" alt="linkedin"></a>
+            </section>
+            <section class="copyright">
+                Copyright &copy;2025 Sorkin and Kovsher. All rights reserved.
+            </section>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="left_side">
+            <p>Контакты</p>
+            <p>СВЯЖИТЕСЬ С НАМИ</p>
+            <p>ул. Скрыганова 5, этаж 6, пом. 615, Минск, Беларусь</p>
+            <p>+375-12-345-67-89</p>
+            <p>koso@gmail.com</p>
+            <div class="social_networks">
+                <a href="#">TELEGRAM</a>
+                <a href="#">FACEBOOK</a>
+                <a href="#">INSTAGRAM</a>
+                <a href="#">LINKEDIN</a>
+            </div>
+        </section>
+
+        <section class="right_side">
+            <p>ЕСТЬ ПРОЕКТ?</p>
+            <form action="" method="post">
+                <div>
+                    <input type="text" name="name" placeholder="ФИО">
+                    <input type="email" name="email" placeholder="EMAIL">
+                </div>
+                <textarea name="message" placeholder="СООБЩЕНИЕ" rows="5"></textarea>
+                <input type="file" name="input_file" id="input_file" hidden>
+                <label for="input_file">
+                    <img src="/assets/svg/attach.svg" alt="attach_icon">
+                    ПРИКРЕПИТЬ ФАЙЛ
+                </label>
+                <button type="submit">
+                    Отправить
+                    <img src="/icon/web-app-manifest-192x192.png" alt="arrow_ico">
+                </button>
+            </form>
+        </section>
+
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const menu = document.querySelector(".menu");
+
+            menuToggle.addEventListener("click", function () {
+                menu.classList.toggle("active");
+                menuToggle.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
+
 </html>
