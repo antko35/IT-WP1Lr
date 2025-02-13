@@ -3,7 +3,6 @@ main {
   justify-content: space-between;
   flex-direction: row;
   margin-top: 4%;
-  margin-left: 15vw;
   padding: 0;
   align-items: center;
   flex-wrap: nowrap;
@@ -58,7 +57,7 @@ main {
   max-width: 100%;
 }
 
-.photo figcaption span {
+.photo p span {
   font-size: 2.2em;
   text-transform: uppercase;
   color: #e36c11;

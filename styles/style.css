@@ -37,9 +37,10 @@ body {
 
 /* ==== Меню ==== */
 .menu {
-  width: 15vw;
-  /*max-width: 250px;*/
+  width: 20vw;
+  max-width: 250px;
   height: 100vh;
+  min-height: fit-content;
   padding-left: 3%;
   position: fixed;
   left: 0;
@@ -112,8 +113,13 @@ body {
 /* Основной контент */
 main {
   margin-left: 20vw;
-
   padding: 20px;
+}
+
+@media screen and (min-width: 1250px) {
+  main{
+    margin-left: 250px;
+  }
 }
 
 /* ==== Мобильное меню ==== */
