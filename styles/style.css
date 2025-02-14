@@ -87,7 +87,7 @@ body {
 
 .links {
   flex-direction: column;
-  margin-top: auto;
+  margin-top: 10%;
   display: flex;
   gap: 15px;
   padding-top: 20px;

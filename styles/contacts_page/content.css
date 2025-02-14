@@ -2,16 +2,17 @@ main {
   display: flex;
   justify-content: left;
   align-items: center;
-  padding-right: 5%;
+  padding-right: 3%;
   width: 100%;
   height: 100vh;
-  gap: 9%;
 }
 
 /* Левая часть */
 
-.left_side{
+.left_side {
   margin-left: 5vw;
+  margin-right: 4%;
+  max-width: 50%;
 }
 
 .left_side h2:nth-child(1) {
@@ -61,24 +62,24 @@ main {
     #f0a21a 100%
   );
   margin-right: 5vw;
-  padding-inline: 8%;
+  padding-inline: 7%;
   padding-block: 5%;
   color: white;
-  min-width: 50vw;
+  width: 50%;
 }
 
-.form_first_line{
+.form_first_line {
   display: flex;
   gap: 8%;
   width: 100%;
 }
 
 /*Поля фио и емейл занимают по 50% ширины*/
-.form_first_line input{
-  width: 50%
+.form_first_line input {
+  width: 50%;
 }
 
-.right_side > h2:first-child{
+.right_side > h2:first-child {
   font-weight: bold;
   font-size: 2em;
   margin-bottom: 5%;
@@ -102,28 +103,29 @@ main {
 }
 
 .right_side form input::placeholder,
-.right_side form textarea::placeholder{
-    color: white;
-    font-weight: 300;
+.right_side form textarea::placeholder {
+  color: white;
+  font-weight: 300;
 }
 
 /*Убрать рамку при фокусе input*/
 .right_side form input:focus,
-.right_side form textarea:focus{
-    outline: none;
+.right_side form textarea:focus {
+  outline: none;
 }
 
-label[for="input_file"]{
+label[for="input_file"] {
   display: flex;
   gap: 3%;
   font-weight: 300;
 }
 
-.right_side form button[type="submit"]{
+.right_side form button[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 40%;
+  min-width: fit-content;
   gap: 4%;
   padding: 2%;
   background: black;
@@ -131,7 +133,7 @@ label[for="input_file"]{
   border: none;
 }
 
-.right_side form button[type="submit"] img{
+.right_side form button[type="submit"] img {
   max-height: 2vh;
   background-image: linear-gradient(
     to right,
@@ -141,9 +143,16 @@ label[for="input_file"]{
   );
 }
 
-.right_side form button[type="submit"] p{
+.right_side form button[type="submit"] p {
   font-size: 1em;
 }
+
+@media (max-width: 925px) or (max-height: 830px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 
 /*Мобилки*/
 
@@ -152,5 +161,6 @@ label[for="input_file"]{
     margin-left: 0;
     flex-wrap: wrap;
     max-height: fit-content;
+    gap: 5%;
   }
 }
