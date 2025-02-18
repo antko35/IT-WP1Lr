@@ -1,121 +1,157 @@
 @font-face {
-    font-family: "main";
-    src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf");
+  font-family: "main";
+  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "sans_medium";
+  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Medium.ttf");
+}
+@font-face {
+  font-family: "sans_bold_italic";
+  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-BoldItalic.ttf");
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100vh;
+}
+
+.content,
+.photo {
+  flex-basis: 45%; /* Задайте одинаковую ширину */
+  max-width: 45%; /* Ограничите максимальную ширину */
+  height: auto;
+}
+.content {
+  flex: 1;
+  width: 20vw;
+  height: auto;
+  flex-direction: column;
+  margin-left: 5%;
+}
+
+.text p:first-child {
+  max-width: 70%;
+  font-family: "main";
+  /*font-size: 102px;*/
+  font-size: 5rem;
+
+  /* word-wrap: break-word; */
+}
+
+.text p:nth-child(2) {
+  font-family: "main";
+  font-size: 2.5rem;
+}
+
+.button {
+  padding: 5%;
+  width: fit-content;
+  height: fit-content;
+  max-width: 230px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.button_container {
+  display: flex;
+  gap: 5%;
+}
+.button_container a {
+  font-family: "sans_medium";
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  align-self: center;
+}
+.button_container img {
+  width: 15%;
+  height: 15%;
+}
+
+.contact_info {
+  margin-top: 10vh;
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 3vw;
+}
+
+.phone,
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+
+.contact_info p {
+  font-family: "sans_bold_italic";
+  font-size: 1rem;
+}
+
+.photo {
+  margin: 5vw;
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10%;
+}
+
+.socials img {
+  height: 131px;
+  width: 1px;
+}
+
+
+
+@media (max-width: 768px) or (max-height: 835px) {
+    html{
+        font-size: 12px;
+    }
+
+    
+}
+
+
+@media (max-width: 690px){
+    html{
+        font-size: 10px;
+    }
+
+    main{
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .content{
+        width: fit-content;
+        margin: 0
+    }
+
+    .inside_content{
+        width: fit-content;
+    }
+
+    .contact_info{
+        flex-direction: column;
+    }
+
+    .socials{
+        display: none;
+    }
   }
-  
-  @font-face {
-    font-family: "sans_medium";
-    src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Medium.ttf");
-  }
-  @font-face {
-    font-family: "sans_bold_italic";
-    src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-BoldItalic.ttf");
-  }
-  
-
-main{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap; 
-    width: 100%;
-    height: 100vh;
-}
-
-.content, .photo {
-    flex-basis :45% ; /* Задайте одинаковую ширину */
-    max-width :45% ; /* Ограничите максимальную ширину */
-    height:auto ;
-}
-.content{
-    flex: 1;
-    width: 20vw;
-    height: auto;
-    flex-direction: column;
-}
-
-.text p:first-child{
-    max-width: 70%;
-    font-family: "main";
-    /*font-size: 102px;*/
-    font-size: calc(24px + 78 * (100vw - 320px) / 960);
-
-    /* word-wrap: break-word; */
-}
-
-.text p:nth-child(2){
-    font-family: "main";
-    font-size: 32px;
-}
-
-.button{
-    margin-top: 10px;
-    width: 259px;
-    height: 56px;
-    max-width: 230px;
-    background-color: black;
-    display:  flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.button_container{
-    justify-self: center;
-    align-self: center;
-    display: flex;
-    justify-content: space-between;
-}
-.button_container a{
-    font-family: "sans_medium";
-    font-size: 18px;
-    text-decoration: none;
-    color: white;
-    align-self: center;
-}
-
-.button_container img{
-    margin-left: 10px;
-    width: 30px;
-    height: 30px;
-}
-
-.contact_info{
-    margin-top: 10vh;
-    display: flex;
-    /* justify-content: space-between; */
-    gap: 3vw;
-}
-
-.phone, .mail{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact_info p{
-    font-family: "sans_bold_italic";
-    font-size: 18px;
-}
-
-.photo{
-    margin: 5vw;
-}
-.photo img{
-    max-width: 100%;
-    height: auto;
-}
-
-.socials{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.socials img{
-    height: 131px;
-    width: 1px;
-}
-

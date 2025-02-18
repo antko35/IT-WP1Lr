@@ -41,7 +41,7 @@ body {
   max-width: 250px;
   height: 100vh;
   min-height: fit-content;
-  padding-left: 3%;
+  padding-inline: 3%;
   position: fixed;
   left: 0;
   top: 0;
@@ -50,7 +50,7 @@ body {
   flex-direction: column;
   /* align-items: center; */
   padding-block: 3vh;
-  transition: top 0.7s ease-in-out;
+  transition: top 0.7s ease-out;
 }
 
 .logo {
@@ -108,6 +108,7 @@ body {
   color: white;
   text-align: left;
   padding-bottom: 15px;
+
 }
 
 /* Основной контент */
@@ -149,11 +150,11 @@ main {
 }
 
 /* ==== Адаптация под мобильные устройства ==== */
-@media (max-width: 768px) or (max-height: 760px) {
+@media (max-width: 768px) or (max-height: 835px) {
   .menu {
     width: 100%;
     height: auto;
-    top: -100%;
+    top: -300%;
     align-items: start;
     padding-top: 75px;
     font-size: 12px;

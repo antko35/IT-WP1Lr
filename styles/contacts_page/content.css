@@ -163,4 +163,8 @@ label[for="input_file"] {
     max-height: fit-content;
     gap: 5%;
   }
+
+  .right_side{
+    width: 100%;
+  }
 }
