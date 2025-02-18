@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "sans_semibolditalic";
+    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-SemiBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "sans_bold";
+    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
+}
+
+main{
+    margin-top: 4%;
+    /* padding: 0; */
+}
+
+.content{
+    width: 64vw;
+}
+
+.title .works{
+    font-family: "sans_semibolditalic";
+    font-size: 18px;
+}
+
+.title .res_pr{
+    font-family: "sans_bold";
+    font-size: 40px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Автоматически подстраивает колонки */
+    gap: 5%; /* Расстояние между элементами */
+    /* padding: 20px;  */
+    width: 65vw;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* Расстояние между текстом и изображением */
+    background: #f9f9f9; /* Фон для каждого проекта */
+    width: 100%;
+    /* width: 44%; */
+    /* padding: 20px; Внутренние отступы */
+    /* border-radius: 10px; Скругление углов */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Тень для красоты */
+}
+
+.project img {
+    width: 57%; /* Изображение занимает всю ширину блока */
+    height: auto; /* Сохраняет пропорции */
+    border-radius: 8px; /* Скругление углов изображения */
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Расстояние между элементами текста */
+}
+
+.text p:first-child {
+    font-family: "sans_semibolditalic";
+    font-size: 18px;
+    /* color: #555;  */
+}
+
+.text p:nth-child(2) {
+    font-family: "sans_bold";
+    font-size: 40px; 
+    /* color: #333;  */
+}
+
+.text img {
+    width: 48px;
+    height: 48px;
+    /* align-self: ; Иконка справа */
+}
+
+.load_more_button {
+    grid-column: 1 / -1; /* Кнопка занимает всю ширину сетки */
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.load_more_button .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: #007bff; /* Цвет кнопки */
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.load_more_button img {
+    width: 24px;
+    height: 24px;
+}
