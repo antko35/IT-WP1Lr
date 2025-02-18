@@ -18,11 +18,11 @@ main {
 .left_side h2:nth-child(1) {
   font-weight: 500;
   margin-bottom: 4%;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .left_side p:nth-child(2) {
-  font-size: 2.5em;
+  font-size: 2.5rem;
   margin-bottom: 4%;
 }
 
@@ -31,19 +31,19 @@ main {
 }
 
 .left_side p:nth-child(4) {
-  font-size: 1.9em;
+  font-size: 1.9rem;
   margin-bottom: 4%;
 }
 
 .left_side p:nth-child(5) {
-  font-size: 1.9em;
+  font-size: 1.9rem;
   margin-bottom: 15%;
 }
 
 .social_networks {
   display: flex;
   gap: 5%;
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 .social_networks a {
@@ -81,7 +81,7 @@ main {
 
 .right_side > h2:first-child {
   font-weight: bold;
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 5%;
 }
 
@@ -97,7 +97,7 @@ main {
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 0.1em solid white;
+  border-bottom: 0.1rem solid white;
   color: white;
   padding-block: 3%; /*placeholder не прижат ко дну*/
 }
@@ -124,10 +124,10 @@ label[for="input_file"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 40%;
+  max-width: 35%;
   min-width: fit-content;
   gap: 4%;
-  padding: 2%;
+  padding: 3%;
   background: black;
   color: white;
   border: none;
@@ -144,19 +144,16 @@ label[for="input_file"] {
 }
 
 .right_side form button[type="submit"] p {
-  font-size: 1em;
+  font-size: 1rem;
 }
-
-@media (max-width: 925px) or (max-height: 830px) {
-  body {
-    font-size: 14px;
-  }
-}
-
 
 /*Мобилки*/
 
 @media (max-width: 768px) or (max-height: 760px) {
+  html {
+    font-size: 12px;
+  }
+
   main {
     margin-left: 0;
     flex-wrap: wrap;
@@ -164,7 +161,7 @@ label[for="input_file"] {
     gap: 5%;
   }
 
-  .right_side{
+  .right_side {
     width: 100%;
   }
 }

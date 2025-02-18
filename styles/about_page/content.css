@@ -13,7 +13,6 @@ main {
 
 .content {
   display: flex;
-  flex-basis: auto; /* Задайте одинаковую ширину */
   max-width: 70%; /* Ограничите максимальную ширину */
   flex-direction: column;
 }
@@ -46,11 +45,11 @@ main {
 }
 
 .photo {
-  font-size: 1em;
+  font-size: 1rem;
   text-align: center;
   font-weight: bold;
   width: 25vw;
-  margin-block: calc(2vw + 2vh);
+  margin-block: calc(1vw + 1vh);
 }
 
 .photo img {
@@ -58,7 +57,7 @@ main {
 }
 
 .photo p span {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   text-transform: uppercase;
   color: #e36c11;
 }

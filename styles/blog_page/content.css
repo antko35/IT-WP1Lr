@@ -13,12 +13,12 @@ main {
 }
 
 .page_title h1:nth-child(1) {
-  font-size: 1em;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 
 .page_title p:nth-child(2) {
-  font-size: 2.3em;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -30,13 +30,14 @@ main {
 
 .blog_block {
   max-width: 18vw;
+  font-size: 1.3rem;
 }
 
-.blog_block p:nth-child(3){
-    margin-top: 4%;
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+.blog_block p:nth-child(3) {
+  margin-top: 4%;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
 
 .blog_block img {
   width: 100%; /*Фото остается внутри блока*/
@@ -53,7 +54,7 @@ main {
   min-width: fit-content; /*Настройки ширины чтобы переноса слов не было*/
   width: 30%;
   max-width: 250px;
-  padding: 1%;
+  padding: 0.6%;
   cursor: pointer;
   background-color: black;
 }
@@ -71,32 +72,40 @@ main {
     #f0a21a 100%
   );
   max-height: 3vh;
-  min-height: 24px;
   margin-left: 10%;
 }
 
 /*Мобилки*/
 
 @media (max-width: 768px) or (max-height: 760px) {
+  html {
+    font-size: 12px;
+  }
+
   main {
     margin-left: 0;
     height: fit-content;
+    width: 100vw;
   }
 
-  .page_title{
+  .page_title {
     margin-bottom: 4%;
   }
 
   .blog {
     flex-direction: column;
+    align-items: center;
     gap: 5vh;
   }
 
   .blog_block {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 30vh;
+    max-width: 70vw;
     gap: 1vh;
+  }
+
+  .blog_link {
+    margin-top: 7vw;
   }
 }

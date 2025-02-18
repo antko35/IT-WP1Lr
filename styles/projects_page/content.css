@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "sans_semibolditalic";
+  src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: "sans_bold";
+  src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
+}
+
+main {
+  margin-top: 4%;
+  padding-inline: 5%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.title .works {
+  font-family: "sans_semibolditalic";
+  font-size: 1.6rem;
+}
+
+.title .res_pr {
+  font-family: "sans_bold";
+  font-size: 2.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 5%;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+  gap: 5%; /* Расстояние между текстом и изображением */
+  background: #f9f9f9; /* Фон для каждого проекта */
+
+  /* width: 44%; */
+  /* padding: 20px; Внутренние отступы */
+  /* border-radius: 10px; Скругление углов */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Тень для красоты */
+}
+
+.project img {
+  width: 50%; /* Изображение занимает всю ширину блока */
+  object-fit: contain; /* Сохраняет пропорции */
+  /*border-radius: 8px;  Скругление углов изображения */
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh; /* Расстояние между элементами текста */
+}
+
+.text p:first-child {
+  font-family: "sans_semibolditalic";
+  font-size: 1.4rem;
+  /* color: #555;  */
+}
+
+.text p:nth-child(2) {
+  font-family: "sans_bold";
+  font-size: 2.3rem;
+  /* color: #333;  */
+}
+
+.text img {
+  width: 30%;
+  height: auto;
+  /* align-self: ; Иконка справа */
+}
+
+/*Кнопка загрузить больше*/
+
+.load_link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  min-width: fit-content;
+  width: 30%;
+  max-width: 250px;
+  padding-block: 2%;
+  padding-inline: 5%;
+  cursor: pointer;
+  background-color: black;
+
+  align-self: center;
+}
+
+.load_link a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.load_link img {
+  background-image: linear-gradient(
+    to right,
+    #be69eb 0%,
+    #e04f4f 50%,
+    #f0a21a 100%
+  );
+  max-height: 3vh;
+  margin-left: 10%;
+}
+
+@media (max-width: 768px) or (max-height: 760px) {
+  html {
+    font-size: 10px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+  }
+}
