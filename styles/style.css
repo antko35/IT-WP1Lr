@@ -1,26 +1,21 @@
-/*@font-face {
-  font-family: "main";
-  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf");
-}*/
-
 @font-face {
   font-family: "main";
-  src: url("/assets/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth\,wght.ttf");
+  src: url("../assets/fonts/IBM_Plex_Sans/IBMPlexSans-VariableFont_wdth\,wght.ttf");
 }
 
 @font-face {
   font-family: "logo";
-  src: url("/assets/fonts/IBM_Plex_Serif/IBMPlexSerif-Bold.ttf");
+  src: url("../assets/fonts/IBM_Plex_Serif/IBMPlexSerif-Bold.ttf");
 }
 
 @font-face {
   font-family: "sans_medium";
-  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Medium.ttf");
+  src: url("../assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Medium.ttf");
 }
 
 @font-face {
   font-family: "sans_bold_italic";
-  src: url("/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-BoldItalic.ttf");
+  src: url("../assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-BoldItalic.ttf");
 }
 
 * {
@@ -48,7 +43,7 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  
+
   padding-block: 3vh;
   transition: top 0.7s ease-out;
 }
@@ -56,7 +51,7 @@ body {
 .logo {
   margin-top: 2vh;
   font-family: "logo";
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: white;
   margin-bottom: 30px;
 }
@@ -73,13 +68,13 @@ body {
   text-decoration: none;
   padding: 10px 15px;
   transition: 0.3s;
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .navbar a:hover,
 .navbar a.active {
   font-weight: bold;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   border-left: 4px solid white;
   padding-left: 10px;
 }
@@ -104,10 +99,10 @@ body {
 }
 
 .copyright {
+  font-size: 1rem;
   color: white;
   text-align: left;
   padding-bottom: 15px;
-
 }
 
 /* Основной контент */
@@ -117,7 +112,7 @@ main {
 }
 
 @media screen and (min-width: 1250px) {
-  main{
+  main {
     margin-left: 250px;
   }
 }
@@ -140,7 +135,7 @@ main {
 
 .menu-toggle {
   display: none;
-  font-size: 2em;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
   position: fixed;
@@ -151,21 +146,35 @@ main {
 
 /* ==== Адаптация под мобильные устройства ==== */
 @media (max-height: 660px) {
-  
+  /*html {
+     font-size: 10px; 
+  }*/
+
+  .links {
+    display: none;
+  }
+
+  .navbar {
+    gap: 0;
+  }
+
+  .links {
+    margin: 0;
+    padding: 3%;
+  }
 }
 
-
-
-@media (max-width: 768px) or (max-height: 835px){
+@media (max-width: 768px) or (max-height: 835px) {
   .menu {
     width: 100%;
     top: -300%;
     align-items: start;
     padding-top: 5vh;
     font-size: 12px;
+    z-index: 900;
   }
 
-  .navbar{
+  .navbar {
     font-size: 12px;
   }
 

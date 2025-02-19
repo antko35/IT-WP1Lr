@@ -1,17 +1,4 @@
-@font-face {
-    font-family: "sans_SemiBoldItalic";
-    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-SemiBoldItalic.ttf);
-}
 
-@font-face {
-    font-family: "sans_Bold";
-    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
-}
-
-@font-face {
-    font-family: "sans_regular";
-    src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Regular.ttf);
-}
 /* Основные стили для заголовков */
 .content {
     margin-top: 8.3vh;
@@ -19,14 +6,13 @@
 }
 
 .title .services-title {
-    font-size: 18px;
-    font-family: "sans_SemiBoldItalic";
+    font-size: 1.3rem;
+    font-style: italic;
     margin-bottom: 10px;
 }
 
 .title .profile-title {
-    font-size: 48px;
-    font-family: "sans_Bold";
+    font-size: 3.3rem;
     font-weight: bold;
     margin-bottom: 30px;
 }
@@ -64,7 +50,6 @@
 .service-header p {
     margin: 0;
     font-size: 32px;
-    font-family: "sans_Bold";
     font-weight: bold;
     color: black;
     position: relative; 
@@ -109,8 +94,7 @@
 }
 
 .service-content p{
-    font-size: 16px;
-    font-family: "sans_regular";
+    font-size: 1.2rem;
 }
 
 /* Класс для развернутого блока */

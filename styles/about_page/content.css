@@ -1,7 +1,6 @@
 main {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   margin-top: 4%;
   padding: 0;
   align-items: center;
@@ -96,8 +95,9 @@ main {
 }
 
 .contact_info p {
-  font-family: "sans_bold_italic";
-  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.3rem;
   width: 15vw;
 }
 
@@ -132,7 +132,7 @@ main {
 }
 
 .experience_inf_block p:first-child span {
-  font-size: 2em;
+  font-size: 2rem;
   color: #b300ff;
 }
 
@@ -173,11 +173,11 @@ main {
 }
 
 .lower_content .left_side p:nth-child(1) {
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .lower_content .left_side p:nth-child(2) {
-  font-size: 3em;
+  font-size: 3rem;
   margin-block: 5%;
 }
 
@@ -217,21 +217,57 @@ main {
 }
 
 .lower_content .step p:nth-child(2) {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 /*Мобилки*/
 
 @media (max-width: 768px) or (max-height: 760px) {
+
+  html{
+    font-size: 12px;
+  }
+
   main {
-    margin-left: 0;
+    margin-top: 10vh;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .content{
+    width: 100vw;
   }
 
   .upper_content {
-    width: fit-content;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
   }
 
-  .lower_content {
-    width: fit-content;
+  .upper_content .photo{
+    width: 100%;
+  }
+
+  .contact_info{
+    width: 100%;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+
+  .lower_content{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .lower_content .left_side {
+    max-width: 100%;
+    margin-bottom: 20%;
+  }
+
+  .lower_content .right_side {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    gap: 3vh;
   }
 }

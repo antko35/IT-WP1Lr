@@ -1,12 +1,3 @@
-@font-face {
-  font-family: "sans_semibolditalic";
-  src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-SemiBoldItalic.ttf);
-}
-
-@font-face {
-  font-family: "sans_bold";
-  src: url(/assets/fonts/IBM_Plex_Sans/static/IBMPlexSans-Bold.ttf);
-}
 
 main {
   margin-top: 4%;
@@ -20,12 +11,10 @@ main {
 }
 
 .title .works {
-  font-family: "sans_semibolditalic";
   font-size: 1.6rem;
 }
 
 .title .res_pr {
-  font-family: "sans_bold";
   font-size: 2.5rem;
 }
 
@@ -60,13 +49,11 @@ main {
 }
 
 .text p:first-child {
-  font-family: "sans_semibolditalic";
   font-size: 1.4rem;
   /* color: #555;  */
 }
 
 .text p:nth-child(2) {
-  font-family: "sans_bold";
   font-size: 2.3rem;
   /* color: #333;  */
 }
@@ -112,6 +99,8 @@ main {
   max-height: 3vh;
   margin-left: 10%;
 }
+
+
 
 @media (max-width: 768px) or (max-height: 760px) {
   html {
