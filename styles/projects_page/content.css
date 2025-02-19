@@ -44,6 +44,7 @@ main {
 
 .text {
   display: flex;
+  width: 50%;
   flex-direction: column;
   gap: 1vh; /* Расстояние между элементами текста */
 }
