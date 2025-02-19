@@ -12,10 +12,13 @@ main {
 
 .title .works {
   font-size: 1.6rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 .title .res_pr {
-  font-size: 2.5rem;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 .projects {
@@ -47,15 +50,17 @@ main {
   width: 50%;
   flex-direction: column;
   gap: 1vh; /* Расстояние между элементами текста */
+  font-weight: bold;
 }
 
 .text p:first-child {
   font-size: 1.4rem;
+  font-style: italic;
   /* color: #555;  */
 }
 
 .text p:nth-child(2) {
-  font-size: 2.3rem;
+  font-size: 2rem;
   /* color: #333;  */
 }
 
