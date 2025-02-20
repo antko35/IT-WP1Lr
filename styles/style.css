@@ -165,6 +165,10 @@ main {
 }
 
 @media (max-width: 768px) or (max-height: 835px) {
+  html {
+    font-size: 12px;
+  }
+
   .menu {
     width: 100%;
     top: -300%;
