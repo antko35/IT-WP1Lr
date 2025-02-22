@@ -18,8 +18,9 @@ main {
   margin-left: 5%;
 }
 
-.text p:first-child {
+.text h1:first-child {
   max-width: 70%;
+  font-weight: 400;
   font-family: "main";
   font-size: 5rem;
 }
@@ -50,7 +51,8 @@ main {
 }
 
 .button img {
-  width: 12%;
+  width: 10%;
+  height: 10%;
   background-image: linear-gradient(
     to right,
     #be69eb 0%,
@@ -94,43 +96,44 @@ main {
   gap: 10%;
 }
 .socials img {
-  height: 50%;
+  height: 10%;
 }
 
 
 
-@media (max-width: 768px) or (max-height: 835px) {
-    html{
-        font-size: 12px;
-    }
-}
-
-
-@media (max-width: 550px){
-    html{
-        font-size: 10px;
-    }
+@media (max-width: 550px) or (max-height: 460px){
 
     main{
-      margin: 0;
       flex-direction: column;
       align-items: center;
       height: fit-content;
       gap: 4vh;
     }
 
+
     .content{
         width: fit-content;
         margin: 0
     }
 
+    .content .text h1{
+      font-size: 3rem;
+    }
+
+    .content .text p{
+      font-size: 1.5rem;
+    }
+
     .contact_info{
         flex-direction: column;
         margin-top: 25%;
+        font-size: 0.7rem;
+        white-space: wrap;
     }
 
     .button{
       width: fit-content;
+      font-size: 0.7rem;
     }
 
     .photo{

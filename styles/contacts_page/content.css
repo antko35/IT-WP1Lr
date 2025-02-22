@@ -1,19 +1,13 @@
 main {
   display: flex;
-  justify-content: left;
+  justify-content: space-around;
   align-items: center;
   padding-right: 3%;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
 /* Левая часть */
-
-.left_side {
-  margin-left: 5vw;
-  margin-right: 4%;
-  max-width: 50%;
-}
 
 .left_side h2:nth-child(1) {
   font-weight: 500;
@@ -26,7 +20,8 @@ main {
   margin-bottom: 4%;
 }
 
-.left_side p:nth-child(3) {
+.left_side address:nth-child(3) {
+  font-style: normal;
   margin-bottom: 15%;
 }
 
@@ -61,7 +56,6 @@ main {
     #e04f4f 50%,
     #f0a21a 100%
   );
-  margin-right: 5vw;
   padding-inline: 7%;
   padding-block: 5%;
   color: white;
@@ -149,10 +143,7 @@ label[for="input_file"] {
 
 /*Мобилки*/
 
-@media (max-width: 768px) or (max-height: 760px) {
-  html {
-    font-size: 12px;
-  }
+@media (max-width: 768px) {
 
   main {
     margin-left: 0;
