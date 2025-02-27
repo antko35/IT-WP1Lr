@@ -80,7 +80,7 @@ main {
 
 /*Мобилки*/
 
-@media (max-width: 768px) or (max-height: 760px) {
+@media (max-width: 768px){
 
   main {
     margin-left: 0;
