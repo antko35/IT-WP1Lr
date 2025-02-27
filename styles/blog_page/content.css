@@ -101,7 +101,7 @@ main {
   .blog_block {
     display: flex;
     flex-direction: column;
-    max-width: 70vw;
+    max-width: 60vmin;
     gap: 1vh;
   }
 
