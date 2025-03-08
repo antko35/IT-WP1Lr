@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/blog_page/content.css">
-
+    <link rel="stylesheet" type="text/css" href="../styles/blog_page/modalWindow.css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog_page/pagination.css">
     <title>Блог</title>
     <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="/icon/favicon.ico">
@@ -50,35 +50,42 @@
             <p>ЧИТАЙТЕ НАШ БЛОГ</p>
         </section>
 
-        <div class="blog">
+        <!-- Кнопка для открытия модального окна -->
+        <button id="openModalButton">Добавить новую карточку</button>
+
+        <!-- Модальное окно -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Добавить новую карточку</h2>
+                <form id="addCardForm">
+                    <label for="imageInput">Выберите фото:</label>
+                    <input type="file" id="imageInput" accept="image/*" required>
+                    <label for="captionInput">Подпись:</label>
+                    <input type="text" id="captionInput" placeholder="Введите подпись" required>
+                    <label for="dateInput">Дата:</label>
+                    <input type="date" id="dateInput" required>
+                    <button type="submit">ОК</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Контейнер для карточек блога -->
+        <div class="blog" id="blogContainer">
+            <!-- Пример карточки -->
             <div class="blog_block">
                 <img src="../assets/photos/blog1.png" alt="blog_photo">
                 <p><i>10 февраля, 2025</i></p>
-                <p>10 примеров сайтов-портфолио </p>
-                <img src="../assets/svg/horizontal_line.svg" alt="horizontal_line">
-            </div>
-
-            <div class="blog_block">
-                <img src="../assets/photos/blog2.png" alt="blog_photo">
-                <p><i>1 февраля, 2025</i></p>
-                <p>5 советов, как работать в команде</p>
-                <img src="../assets/svg/horizontal_line.svg" alt="horizontal_line">
-            </div>
-
-            <div class="blog_block">
-                <img src="../assets/photos/blog3.png" alt="blog_photo">
-                <p><i>20 января, 2025</i></p>
-                <p>Защита сайтов от кибер-атак</p>
+                <p>10 примеров сайтов-портфолио</p>
                 <img src="../assets/svg/horizontal_line.svg" alt="horizontal_line">
             </div>
         </div>
 
-
-        <div class="blog_link">
-            <a href="#">Загрузить больше</a>
-            <img src="../icon/web-app-manifest-192x192.png" alt="arrow_icon">
+        <div class="pagination">
+            <button id="prevButton">Назад</button>
+            <span id="pageInfo"></span>
+            <button id="nextButton">Вперед</button>
         </div>
-
     </main>
 
     <script>
@@ -90,6 +97,135 @@
                 menu.classList.toggle("active");
                 menuToggle.classList.toggle("active");
             });
+
+            // Модальное окно
+            const modal = document.getElementById("modal");
+            const openModalButton = document.getElementById("openModalButton");
+            const closeModalButton = document.querySelector(".close");
+            const addCardForm = document.getElementById("addCardForm");
+            const blogContainer = document.getElementById("blogContainer");
+
+            // Открытие модального окна
+            openModalButton.addEventListener("click", function () {
+                modal.style.display = "block";
+            });
+
+            // Закрытие модального окна
+            closeModalButton.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            // Закрытие модального окна при клике вне его
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+
+            // Обработка формы добавления карточки
+            addCardForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                // Получаем данные из формы
+                const imageFile = document.getElementById("imageInput").files[0];
+                const caption = document.getElementById("captionInput").value;
+                const date = document.getElementById("dateInput").value;
+
+                // Создаем новый элемент карточки
+                const newCard = document.createElement("div");
+                newCard.classList.add("blog_block");
+
+                // Добавляем изображение
+                const image = document.createElement("img");
+                image.src = URL.createObjectURL(imageFile);
+                image.alt = "blog_photo";
+                newCard.appendChild(image);
+
+                // Добавляем дату
+                const dateElement = document.createElement("p");
+                dateElement.innerHTML = `<i>${date}</i>`;
+                newCard.appendChild(dateElement);
+
+                // Добавляем подпись
+                const captionElement = document.createElement("p");
+                captionElement.textContent = caption;
+                newCard.appendChild(captionElement);
+
+                // Добавляем горизонтальную линию
+                const line = document.createElement("img");
+                line.src = "../assets/svg/horizontal_line.svg";
+                line.alt = "horizontal_line";
+                newCard.appendChild(line);
+
+                // Добавляем карточку в блог
+                blogContainer.appendChild(newCard);
+
+                // Закрываем модальное окно
+                modal.style.display = "none";
+
+                // Очищаем форму
+                addCardForm.reset();
+
+                updatePagination();
+            });
+
+            const prevButton = document.getElementById("prevButton");
+            const nextButton = document.getElementById("nextButton");
+            const pageInfo = document.getElementById("pageInfo");
+
+            let currentPage = 1;
+            const cardsPerPage = 2;
+
+            // Функция для отображения карточек на текущей странице
+            function showCards(page) {
+                const cards = blogContainer.querySelectorAll(".blog_block");
+                cards.forEach((card, index) => {
+                    if (index >= (page - 1) * cardsPerPage && index < page * cardsPerPage) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            }
+
+            // Функция для обновления информации о странице
+            function updatePagination() {
+                const cards = blogContainer.querySelectorAll(".blog_block");
+                const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+                if (currentPage > totalPages) {
+                    currentPage = totalPages;
+                }
+
+                showCards(currentPage);
+                pageInfo.textContent = `Страница ${currentPage} из ${totalPages}`;
+
+                prevButton.disabled = currentPage === 1;
+                nextButton.disabled = currentPage === totalPages;
+            }
+
+            // Кнопка "Назад"
+            prevButton.addEventListener("click", function () {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updatePagination();
+                }
+            });
+
+            // Кнопка "Вперед"
+            nextButton.addEventListener("click", function () {
+                const cards = blogContainer.querySelectorAll(".blog_block");
+                const totalPages = Math.ceil(cards.length / cardsPerPage);
+
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updatePagination();
+                }
+            });
+
+            // Инициализация пагинации
+            updatePagination();
+
         });
     </script>
 </body>
