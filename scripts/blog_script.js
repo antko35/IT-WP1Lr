@@ -40,6 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const caption = document.getElementById("captionInput").value;
         const date = document.getElementById("dateInput").value;
 
+        //Форматирование даты
+        let regexp = new RegExp("(\\d{4})-(\\d{2})-(\\d{2})");
+        let parse = regexp.exec(date);
+        let months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+        const formattedDate = parse[3] + " " + months[Number(parse[2]) - 1] + ", " + parse[1];
+
         // Создаем новый элемент карточки
         const newCard = document.createElement("div");
         newCard.classList.add("blog_block");
@@ -52,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Добавляем дату
         const dateElement = document.createElement("p");
-        dateElement.innerHTML = `<i>${date}</i>`;
+        dateElement.innerHTML = `<i>${formattedDate}</i>`;
         newCard.appendChild(dateElement);
 
         // Добавляем подпись

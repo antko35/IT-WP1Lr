@@ -52,7 +52,7 @@
         </section>
 
         <!-- Кнопка для открытия модального окна -->
-        <button id="openModalButton">Добавить новую карточку</button>
+        <button type="button" id="openModalButton">Добавить новую карточку</button>
 
         <!-- Модальное окно -->
         <div id="modal" class="modal">
@@ -65,7 +65,7 @@
                     <label for="captionInput">Подпись:</label>
                     <input type="text" id="captionInput" placeholder="Введите подпись" required>
                     <label for="dateInput">Дата:</label>
-                    <input type="date" id="dateInput" required>
+                    <input type="date" id="dateInput" min="2000-01-01" max="2200-01-01" required>
                     <button type="submit">ОК</button>
                 </form>
             </div>
@@ -76,7 +76,7 @@
             <!-- Пример карточки -->
             <div class="blog_block">
                 <img src="../assets/photos/blog1.png" alt="blog_photo">
-                <p><i>10.02.2025</i></p>
+                <p><i>10 Февраля, 2025</i></p>
                 <p>10 примеров сайтов-портфолио</p>
                 <img src="../assets/svg/horizontal_line.svg" alt="horizontal_line">
             </div>
